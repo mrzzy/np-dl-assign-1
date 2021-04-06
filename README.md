@@ -1,14 +1,31 @@
-**Deep Learning**
+# DL Assignment 1
+This repository contains the Deep Learning (DL) models developed as part of image classification task
+assigned as part of the Deep Learning Assignment 1 at Ngee Ann Polytechnic.
+
+
+# Report
+The following report gives a detailed look at the DL work done in the Assignment.
 
 Assignment 1 - Report
 
 By Zhu Zhanyan
 
-Table of Contents
------------------
+## Table of Contents
 
-1. Overview
------------
+**[Table of Contents](#table-of-contents) 2**
+
+**[Overview](#overview) 3**
+
+**[Data Preprocessing and Data Loading](#_e5ouxc3osuvk) 3**
+
+**[Develop the Image Classification Models](#_jnvsjurkogwg) 3**
+
+**[Evaluate models using Test images](#_ifihebdwjevy) 3**
+
+**[Use the Best Model to perform
+classification](#use-the-best-model-to-perform-classification) 3**
+
+## 1. Overview
 
 *Describe the problem, the objective and the approach. (500-1000 words)*
 
@@ -25,8 +42,7 @@ the DL models to evaluate and improve the models predictive performance.
 
 **Problem**
 
-![](assets/media/image13.png){width="7.267716535433071in"
-height="1.8055555555555556in"}
+<img src="assets/media/image13.png" style="width:7.26772in;height:1.80556in" />
 
 The Food-101 dataset contains a collection of 1000 images for each of
 its 101 food types, culminating in a total of 101,000 images of varying
@@ -67,8 +83,7 @@ Beef\_carpaccio
 
 **Assigned Image Categories**
 
-![](assets/media/image6.png){width="2.5692672790901137in"
-height="1.2711581364829396in"}
+<img src="assets/media/image6.png" style="width:2.56927in;height:1.27116in" />
 
 **Samples from Assigned Categories**
 
@@ -79,7 +94,7 @@ DL models are prone to overfit to the training images. To combat this,
 image augmentation could be applied to prevent the DL models from
 quickly overfitting to the small training set.
 
-![](assets/media/image5.png){width="3.8125in" height="3.8125in"}
+<img src="assets/media/image5.png" style="width:3.8125in;height:3.8125in" />
 
 **Images Distribution by Dataset Subset**
 
@@ -151,8 +166,7 @@ follows:
 
 6.  Using the best model to make predictions.
 
-2. Data Preprocessing and Data Loading 
----------------------------------------
+## 2. Data Preprocessing and Data Loading 
 
 **EDA**
 
@@ -169,18 +183,15 @@ for visualization and EDA. One such package is Seaborn which allows the
 data frame directly when plotting the graph, removing the need to add
 additional data manipulation required to message the data for plotting.
 
-![](assets/media/image28.png){width="3.480725065616798in"
-height="3.458340988626422in"}
+<img src="assets/media/image28.png" style="width:3.48073in;height:3.45834in" />
 
 **Samples by Class/Label**
 
-![](assets/media/image31.png){width="3.9895833333333335in"
-height="0.13541666666666666in"}
+<img src="assets/media/image31.png" style="width:3.98958in;height:0.13542in" />
 
 **Seaborn Code used produce the Bar Graph**
 
-![](assets/media/image15.png){width="2.087169728783902in"
-height="3.3240102799650044in"}
+<img src="assets/media/image15.png" style="width:2.08717in;height:3.32401in" />
 
 **Checking for difference in class ratio due to Sampling Bias**
 
@@ -195,8 +206,7 @@ label/class ratio between the subsets and the full dataset due to
 sampling bias. As such, we can be fairly confident that the sampled
 dataset subsets are representative of the entire dataset.
 
-![](assets/media/image7.png){width="2.9791666666666665in"
-height="1.9895833333333333in"}
+<img src="assets/media/image7.png" style="width:2.97917in;height:1.98958in" />
 
 **Image Sizes**
 
@@ -208,8 +218,7 @@ output predicted class probability, the input image provided to the
 models has to be the same. A crop or resize operation is required to
 ensure that the images provided to the model have the same dimensions.
 
-![](assets/media/image1.png){width="5.552083333333333in"
-height="0.90625in"}
+<img src="assets/media/image1.png" style="width:5.55208in;height:0.90625in" />
 
 **Descriptive Statistics computed on the Dataset**
 
@@ -279,8 +288,7 @@ useful technique to expand the training set, special care has to be
 taken to ensure that augmentation is not applied to the test set to get
 consistent and accurate test and validation metrics.
 
-![](assets/media/image33.png){width="4.772391732283465in"
-height="3.7890923009623796in"}
+<img src="assets/media/image33.png" style="width:4.77239in;height:3.78909in" />
 
 **Image Augmentation transforms applied to Trainign Images**
 
@@ -305,8 +313,7 @@ Augmentation on the training set when making a random sized crop of the
 image and on the test/validation using a deterministic centre crop of
 the dataset image.
 
-![](assets/media/image3.png){width="4.454683945756781in"
-height="2.5468755468066493in"}
+<img src="assets/media/image3.png" style="width:4.45468in;height:2.54688in" />
 
 **Total Time spent in each Function**
 
@@ -324,13 +331,13 @@ converts a subset of Python Code into highly optimized machine code
 Preprocessing function into optimized machine code, the Total Time spent
 in the function is cut in about half from 1.4 seconds to 0.57 seconds
 
-![](assets/media/image9.png){width="5.473958880139983in"
-height="2.360546806649169in"}
+<img src="assets/media/image9.png" style="width:5.47396in;height:2.36055in" />
 
 **Total Time spent Preprocessing with/without Numba JIT**
 
-3. Develop the Image Classification Models
-------------------------------------------
+## 
+
+## 3. Develop the Image Classification Models
 
 -   Describe how you build the models and train the models
 
@@ -340,10 +347,9 @@ developed entirely from scratch while the other “Fine Tuned”
 architecture splices pretrained layers obtained from another Model in
 its architecture.
 
-![](assets/media/image20.png){width="1.4807250656167978in"
-height="3.1004855643044618in"}
+<img src="assets/media/image20.png" style="width:1.48073in;height:3.10049in" />
 
-**From Scratch Model High Level Architecture **
+**From Scratch Model High Level Architecture**
 
 **From Scratch Model**
 
@@ -365,8 +371,7 @@ reducing the no.
 
 of weights in the DL model.
 
-![](assets/media/image21.png){width="2.7685597112860894in"
-height="6.261510279965004in"}
+<img src="assets/media/image21.png" style="width:2.76856in;height:6.26151in" />
 
 **ResNET Convolution Block**
 
@@ -396,8 +401,7 @@ by 1 Convolution layer is added on the skip connection to ensure that
 shape of the output both via the skip connection and the convolution
 layers align and can be added.
 
-![](assets/media/image10.png){width="3.3541666666666665in"
-height="4.9375in"}
+<img src="assets/media/image10.png" style="width:3.35417in;height:4.9375in" />
 
 **Dense Classifier Block**
 
@@ -431,8 +435,7 @@ values are valid class probabilities. Dropout layers are added between
 Dense Layers to allow for regularization to be introduced in case of
 overfitting.
 
-![](assets/media/image24.png){width="1.6879713473315836in"
-height="3.594843613298338in"}
+<img src="assets/media/image24.png" style="width:1.68797in;height:3.59484in" />
 
 **Fine Tuned Model Architecture**
 
@@ -457,8 +460,7 @@ designed to be lighter on computation resources \[6\]. To preserve the
 pre-trained weights in the NasNET layers and prevent the overfitting, a
 fraction of the layers is frozen before training.
 
-![](assets/media/image16.png){width="4.020833333333333in"
-height="2.8958333333333335in"}
+<img src="assets/media/image16.png" style="width:4.02083in;height:2.89583in" />
 
 **Training Curve (Accuracy) comparing Fine Tuned and From Scratch
 Models**
@@ -478,15 +480,13 @@ Tuned Model is able to leverage the pre-training on ImageNet in the
 Assignment Dataset task, training around 2-3 times faster as compared to
 the From Scratch model.
 
-4. Training & Tuning
---------------------
+## 4. Training & Tuning
 
 -   Talk about both from scratch and pretrained model (1000-2000 words)
 
 **Training & Tuning Process**
 
-![](assets/media/image14.png){width="4.619792213473316in"
-height="3.104129483814523in"}
+<img src="assets/media/image14.png" style="width:4.61979in;height:3.10413in" />
 
 **The Training & Tuning Process**
 
@@ -514,8 +514,7 @@ to train the DL models is as follows:
 
 **MLFlow**
 
-![](assets/media/image8.png){width="3.2395833333333335in"
-height="1.1666666666666667in"}
+<img src="assets/media/image8.png" style="width:3.23958in;height:1.16667in" />
 
 **Logging Parameters to MLFlow**
 
@@ -535,8 +534,7 @@ training runs in a structured manner. The parameters and metrics and
 then be retrieved from the tracking server and converted into Pandas
 dataframe for further analysis.
 
-![](assets/media/image18.png){width="7.267716535433071in"
-height="2.486111111111111in"}
+<img src="assets/media/image18.png" style="width:7.26772in;height:2.48611in" />
 
 **MLFlow Tracking UI showing Training Runs sorted by Validation
 Accuracy**
@@ -555,15 +553,13 @@ has on the model’s metrics and thereby its predictive performance.
 Making it easier to choose better hyperparameters for the next training
 run.
 
-![](assets/media/image22.png){width="6.581520122484689in"
-height="2.209426946631671in"}
+<img src="assets/media/image22.png" style="width:6.58152in;height:2.20943in" />
 
 **Comparing Multiple Runs in MLFlow Tracking UI**
 
 **Tuning Hyperparameters: Learning Rate**
 
-![](assets/media/image19.png){width="2.562308617672791in"
-height="2.3111056430446193in"}
+<img src="assets/media/image19.png" style="width:2.56231in;height:2.31111in" />
 
 **Effect of LR on Training Curve**
 
@@ -585,12 +581,10 @@ model’s validation accuracy. From this experimentation, the LRs 0.001
 and 0.0001 are chosen for the From Scratch and Fine Tuned models
 respectively.
 
-![](assets/media/image29.png){width="2.929429133858268in"
-height="3.1041666666666665in"}
+<img src="assets/media/image29.png" style="width:2.92943in;height:3.10417in" />
 
 **LR effects on Validation
-Accuracy**![](assets/media/image32.png){width="2.8333333333333335in"
-height="3.044775809273841in"}
+Accuracy**<img src="assets/media/image32.png" style="width:2.83333in;height:3.04478in" />
 
 **Tuning Hyperparameters: No. of Training Epochs**
 
@@ -613,9 +607,7 @@ improving by the end of the training run, more training epochs are
 required to train the model to its full potential.
 
 **Effect of No. of Training(FIt) Epochs on Validation
-Accuracy**![](assets/media/image27.png){width="2.5698206474190726in"
-height="2.673746719160105in"}![](assets/media/image25.png){width="2.5729166666666665in"
-height="2.686427165354331in"}
+Accuracy**<img src="assets/media/image27.png" style="width:2.56982in;height:2.67375in" /><img src="assets/media/image25.png" style="width:2.57292in;height:2.68643in" />
 
 **Tuning Hyperparameters: LR Annealing**
 
@@ -641,18 +633,15 @@ curve of the From Scratch Model with the sudden jumps in training and
 validation accuracy, and the reduced noise on validation accuracy
 towards the end of training where LR annealing is active.
 
-![](assets/media/image23.png){width="3.1406255468066493in"
-height="3.1324464129483816in"}
+<img src="assets/media/image23.png" style="width:3.14063in;height:3.13245in" />
 
 **Effect of LR Annealing on Validation Accuracy**
 
-![](assets/media/image4.png){width="3.2361417322834645in"
-height="2.327225503062117in"}![](assets/media/image30.png){width="3.2968755468066493in"
-height="2.3278258967629046in"}
+<img src="assets/media/image4.png" style="width:3.23614in;height:2.32723in" /><img src="assets/media/image30.png" style="width:3.29688in;height:2.32783in" />
 
 **Effect of LR Annealing on Training Curve**
 
-**Tuning Hyperparameters: Optimizer\
+**Tuning Hyperparameters: Optimizer  
 **The optimizer is an algorithm in which gradient updates are computed
 to train the DL models weights. In this assignment, we experimented with
 using SGD with Momentum and Adam optimizers to train the models. SGD
@@ -665,13 +654,12 @@ to certain accuracy faster than SGD with momentum although its not clear
 if Adam or SGD with Momentum converges to the better final model. Adam
 is used for both From Scratch and Fine Tuned Models
 
-![](assets/media/image11.png){width="3.4427088801399823in"
-height="3.0342508748906387in"}
+<img src="assets/media/image11.png" style="width:3.44271in;height:3.03425in" />
 
 **Effect of Optimizer on Validation Accuracy**
 
 **Tuning Hyperparameters: No. of Convolution Blocks/Size of Filters
-(From Scratch only)\
+(From Scratch only)  
 **For the From Scratch Model, the No. of ResNET-style Convolution Blocks
 to include in the model and the size of the Filters used in the
 Convolution Layers of each ResNET-style Convolution Block have to be
@@ -680,13 +668,12 @@ Convolution Blocks from 3 to 4 provides a significant bump to validation
 metrics while doubling the filter sizes of each Convolution Layer did
 provide a negligible effect on the model’s predictive performance.
 
-![](assets/media/image17.png){width="2.619792213473316in"
-height="2.969961723534558in"}
+<img src="assets/media/image17.png" style="width:2.61979in;height:2.96996in" />
 
 **Effect of Conv Blocks/Filter Size on Validation Accuracy**
 
 **Tuning Hyperparameters: Fraction of Frozen Pretrained Layers (Fine
-Tuned only)\
+Tuned only)  
 **For the Fine Tuned model, the Fraction of pre-trained NasNET layers
 that should be frozen during training needs to be tuned. Freezing the
 pre-trained layers allows the model to keep the weights pre-trained on
@@ -696,14 +683,12 @@ From experimentation, the lower fractions of pre-trained layers frozen
 tended to correlate with higher final validation accuracy up to around
 0.6 of the layers frozen
 
-![](assets/media/image12.png){width="3.8229166666666665in"
-height="3.9791666666666665in"}
+<img src="assets/media/image12.png" style="width:3.82292in;height:3.97917in" />
 
 **Effect of Fraction of Frozen Pretrained Layers on Validation
 Accuracy**
 
-5. Evaluate Models using Test images
-------------------------------------
+## 5. Evaluate Models using Test images
 
 **Evaluating Models on Test Set**
 
@@ -718,21 +703,19 @@ training set and we have tuned the DL model’s hyperparameters to the
 validation set. The evaluation of the best variant of each model type on
 the test set is as follows:
 
-  **Model Type**                **Test Accuracy **   **Test Loss**
-  ----------------------------- -------------------- ---------------
-  From Scratch (Best Variant)   0.8750               0.4528
-  Fine Tuned (Best Variant)     0.9000               0.4108
+| **Model Type**              | **Test Accuracy** | **Test Loss** |
+|-----------------------------|-------------------|---------------|
+| From Scratch (Best Variant) | 0.8750            | 0.4528        |
+| Fine Tuned (Best Variant)   | 0.9000            | 0.4108        |
 
 **Model Selection**
 
 From the test metrics, we can select the Fine Tuned (Best Variant) model
 as the best model to be used for prediction.
 
-6. Use the Best Model to perform classification
------------------------------------------------
+## 6. Use the Best Model to perform classification
 
-![](assets/media/image2.png){width="2.7291666666666665in"
-height="2.625in"}
+<img src="assets/media/image2.png" style="width:2.72917in;height:2.625in" />
 
 **Online Image**
 
@@ -746,23 +729,20 @@ being of each food-type image. The predicted food type can be resolved
 by finding the food type with the highest class predicted probability
 which can be computed with np.argmax().
 
-![](assets/media/image26.png){width="2.6666666666666665in"
-height="2.6458333333333335in"}
+<img src="assets/media/image26.png" style="width:2.66667in;height:2.64583in" />
 
-\
--
+##  
 
-7. Conclusion 
---------------
+## 7. Conclusion 
 
 -   Summarize your model performance and provide suggestions for further
     > improvements (300-500 words)
 
 **Summary of Performance of Best Model**
 
-  **Model Type**              **Training Accuracy**   **Training Loss**   **Validation Accuracy**   **Validation Loss**   **Test Accuracy **   **Test Loss**
-  --------------------------- ----------------------- ------------------- ------------------------- --------------------- -------------------- ---------------
-  Fine Tuned (Best Variant)   0.9836                  0.0559              0.9057                    0.3771                0.9000               0.4108
+| **Model Type**            | **Training Accuracy** | **Training Loss** | **Validation Accuracy** | **Validation Loss** | **Test Accuracy** | **Test Loss** |
+|---------------------------|-----------------------|-------------------|-------------------------|---------------------|-------------------|---------------|
+| Fine Tuned (Best Variant) | 0.9836                | 0.0559            | 0.9057                  | 0.3771              | 0.9000            | 0.4108        |
 
 **Further Improvements**
 
@@ -783,28 +763,29 @@ Assignment Dataset’s tasks should be easier and faster.
 
 \[1\] Food-101 -- Mining Discriminative Components with Random Forests.
 (2014, December 01). Retrieved from
-[*https://data.vision.ee.ethz.ch/cvl/datasets\_extra/food-101*](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101)
+[<u>https://data.vision.ee.ethz.ch/cvl/datasets\_extra/food-101</u>](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101)
 
 \[2\] He, K., Zhang, X., Ren, S., & Sun, J. (2015). Deep Residual
 Learning for Image Recognition. arXiv, 1512.03385. Retrieved from
-[*https://arxiv.org/abs/1512.03385v1*](https://arxiv.org/abs/1512.03385v1)
+[<u>https://arxiv.org/abs/1512.03385v1</u>](https://arxiv.org/abs/1512.03385v1)
 
 \[3\] An Intuitive Explanation of Why Batch Normalization Really Works
 (Normalization in Deep Learning Part 1). (2019, March 15). Retrieved
 from
-[*https://mlexplained.com/2018/01/10/an-intuitive-explanation-of-why-batch-normalization-really-works-normalization-in-deep-learning-part-1*](https://mlexplained.com/2018/01/10/an-intuitive-explanation-of-why-batch-normalization-really-works-normalization-in-deep-learning-part-1)
+[<u>https://mlexplained.com/2018/01/10/an-intuitive-explanation-of-why-batch-normalization-really-works-normalization-in-deep-learning-part-1</u>](https://mlexplained.com/2018/01/10/an-intuitive-explanation-of-why-batch-normalization-really-works-normalization-in-deep-learning-part-1)
 
 \[4\]CS231n Convolutional Neural Networks for Visual Recognition. (2020,
 September 22). Retrieved from
-[*https://cs231n.github.io/neural-networks-1*](https://cs231n.github.io/neural-networks-1)
+[<u>https://cs231n.github.io/neural-networks-1</u>](https://cs231n.github.io/neural-networks-1)
 
 \[5\] Numba: A High Performance Python Compiler. (2020, August 15).
-Retrieved from [*https://numba.pydata.org*](https://numba.pydata.org)
+Retrieved from
+[<u>https://numba.pydata.org</u>](https://numba.pydata.org)
 
 \[6\] Zoph, B., Vasudevan, V., Shlens, J., & Le, Q. V. (2017). Learning
 Transferable Architectures for Scalable Image Recognition. arXiv,
 1707.07012. Retrieved from
-[*https://arxiv.org/abs/1707.07012v4*](https://arxiv.org/abs/1707.07012v4)
+[<u>https://arxiv.org/abs/1707.07012v4</u>](https://arxiv.org/abs/1707.07012v4)
 
 \[7\] Introducing MLflow: an Open Source Platform for the Complete
 Machine Learning Lifecycle. (2020, November 11). Retrieved from
